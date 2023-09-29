@@ -9,3 +9,4 @@ const getEvents = async () => {
 };
 
 getEvents();
+
