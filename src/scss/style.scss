@@ -1,66 +1,166 @@
-
 html {
-    box-sizing: border-box;
-  }
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-  $grey-lightest: EEEEEE;
-
-  $grey-lighter: DDDDDD;
-  $grey: CCCCCC;
-  $grey-darker: BBBBBB;
-  $grey-text: 333333;
-body{
-
-    margin: 0;
+  box-sizing: border-box;
 }
-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    height: 50px;
-    background-color: $grey-darker;
-
-}
-.nav-left>a{
-    text-decoration: none;
-}
-.nav-right>a{
-    text-decoration: none;
-}
-.nav-left{
-display: flex;
-align-items: center;
-margin-left: 2rem;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
-.nav-right{
-    display: flex;
-    align-items: center;
-    margin-right: 2rem;
-    gap: 2rem;
-}
-.main{
-    display:flex;
-    flex-direction: column;
-    width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
+@import "colors"; // imports variables from _colors.scss
 
+body {
+  margin: 0;
 }
-.main-event{
-    display: flex;
-    justify-content: center;
-    background-color: $grey-lighter;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  background-color: $grey-darker;
+}
+.nav-left > a {
+  text-decoration: none;
+  color: $grey-text;
+}
+.nav-right > a {
+  text-decoration: none;
+  color: $grey-text;
+  opacity: 0.8;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  margin-left: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+  gap: 2rem;
 }
-.main-other-events{
-    display: flex;
-    justify-content: center;
-    background-color: $grey-lighter;
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
 }
+.main-event {
+  display: flex;
+  justify-content: center;
+  background-color: $grey-lightest;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+}
+.main-other-events {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-other-events__box {
+  width: 30%;
+  height: 10rem;
+  background-color: $grey-lightest;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-event__featured {
+  writing-mode: vertical-lr;
+  font-weight: bold;
+  padding: 1rem;
+  transform: rotate(180deg);
+}
+
+.register-button {
+  font-size: 1.1rem;
+  font-weight: 300;
+  border: 0;
+  border-radius: 5px;
+  color: $grey-text;
+  background-color: $grey;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  cursor: pointer;
+}
+
+.main-event__registration__button {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 1rem;
+}
+
+// modal window DOWN
+
+.window {
+  color: $grey-text;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 2rem;
+  z-index: 5;
+  background-color: $grey-lightest;
+  width: 1000px;
+  max-width: 70%;
+}
+
+.window.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.window-heading {
+  width: 90%;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.window-heading__title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.close-button {
+  cursor: no-drop;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.window-main {
+  padding: 1rem;
+}
+
+#darken {
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  pointer-events: none;
+}
+
+#darken.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+// modal window UP
