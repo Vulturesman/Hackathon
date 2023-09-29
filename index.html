@@ -24,16 +24,32 @@
           <p>FEATURED EVENT</p>
         </div>
         <div class="main-event__img">
-          <img src="" alt="" />
+          <img src="./src/img/picture.svg" alt="" />
         </div>
         <div class="main-event__description">
           <h2>Event Name</h2>
           <h3>Event description...</h3>
         </div>
         <div class="main-event__registration">
-          <button class="main-event__registration__button register-button">
+          <button
+            data-window-target="#window"
+            class="main-event__registration__button register-button"
+          >
             Register
           </button>
+
+          <div class="window" id="window">
+            <div class="window-heading">
+              <div class="window-heading__title">TEST</div>
+              <button data-close-button class="close-button">x</button>
+            </div>
+            <div class="window-main">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad velit
+              autem, praesentium quibusdam repellat assumenda at id tempora
+              accusamus magnam nam rem molestias corporis, illum explicabo alias
+              voluptate veniam doloremque!
+            </div>
+          </div>
         </div>
       </section>
       <section class="main-other-events">
@@ -43,6 +59,7 @@
         </div>
       </section>
     </main>
-    <script type="module" src="/src/js/index.js"></script>
+    <div id="darken"></div>
+    <script type="module" src="./src/js/modal.js"></script>
   </body>
 </html>
