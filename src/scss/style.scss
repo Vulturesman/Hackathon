@@ -75,6 +75,11 @@ nav {
   align-items: center;
 }
 
+.main-event__img {
+  display: flex;
+  justify-content: center;
+}
+
 .main-event__featured {
   writing-mode: vertical-lr;
   font-weight: bold;
@@ -93,8 +98,12 @@ nav {
   cursor: pointer;
 }
 
-.main-event__registration__button {
+.main-event__registration {
   display: flex;
+  flex-direction: column-reverse;
+}
+
+.main-event__registration__button {
   flex-direction: column-reverse;
   margin: 1rem;
 }
