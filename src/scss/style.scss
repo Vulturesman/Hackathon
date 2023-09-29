@@ -57,11 +57,18 @@ nav {
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-radius: 20px;
+  h3{
+    font-size: 12px;
+  }
 }
 .main-other-events {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  
 }
 
 .main-other-events__box {
@@ -73,11 +80,19 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-size: cover;
+  color: white;
+  text-align: center;
 }
 
+.main-event__description{
+  margin-left: 1rem;
+}
 .main-event__img {
   display: flex;
   justify-content: center;
+  height: 300px;
+  border-radius: 12px;
 }
 
 .main-event__featured {
@@ -122,8 +137,9 @@ nav {
   padding: 2rem;
   z-index: 5;
   background-color: $grey-lightest;
-  width: 1000px;
+  width: 400px;
   max-width: 70%;
+  text-align: center;
 }
 
 .window.active {

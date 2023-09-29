@@ -1,3 +1,4 @@
+//! Class
 const getEvents = async () => {
   const url = "https://test-api.codingbootcamp.cz/api/bcc04bd8/events";
   const data = await fetch(url);
@@ -28,7 +29,7 @@ class OtherEvents {
     if (this.id == 1) {
         console.log(this.id)
         boxForMainevent.appendChild(this.element);
-        this.element.className = "main-event__craeted-box";
+        this.element.className = "main-event";
         this.element.innerHTML = `
         <div class="main-event__featured">
           <p>FEATURED EVENT</p>
@@ -57,3 +58,4 @@ class OtherEvents {
     }
   };
 }
+//! Class
