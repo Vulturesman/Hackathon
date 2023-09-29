@@ -38,3 +38,34 @@ function closeWindow(modal) {
 }
 
 // Modal window UP
+
+/*
+need to create for every button:
+
+        <button
+            data-window-target="#window"
+            class="main-event__registration__button register-button"
+          >
+            Register
+          </button>
+
+          <div class="window" id="window">
+            <div class="window-heading">
+              <div class="window-heading__title">TEST</div>
+              <button data-close-button class="close-button">x</button>
+            </div>
+            <div class="window-main">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad velit
+              autem, praesentium quibusdam repellat assumenda at id tempora
+              accusamus magnam nam rem molestias corporis, illum explicabo alias
+              voluptate veniam doloremque!
+            </div>
+          </div>
+
+
+*/
+
+/*
+extra overlay div for whole body
+<div id="darken"></div>
+*/

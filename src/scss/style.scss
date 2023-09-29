@@ -6,12 +6,9 @@ html {
 *:after {
   box-sizing: inherit;
 }
-$grey-lightest: EEEEEE;
 
-$grey-lighter: DDDDDD;
-$grey: CCCCCC;
-$grey-darker: BBBBBB;
-$grey-text: 333333;
+@import "colors"; // imports variables from _colors.scss
+
 body {
   margin: 0;
 }
@@ -48,27 +45,58 @@ nav {
 .main {
   display: flex;
   flex-direction: column;
-  width: 80vw;
+  width: 1200px;
+  max-width: 80vw;
   margin-left: auto;
   margin-right: auto;
 }
 .main-event {
   display: flex;
   justify-content: center;
-  background-color: $grey-lighter;
+  background-color: $grey-lightest;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  border-radius: 20px;
 }
 .main-other-events {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-other-events__box {
+  width: 30%;
+  height: 10rem;
+  background-color: $grey-lightest;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  background-color: $grey-lighter;
+  align-items: center;
 }
 
 .main-event__featured {
   writing-mode: vertical-lr;
   font-weight: bold;
   padding: 1rem;
+  transform: rotate(180deg);
+}
+
+.register-button {
+  font-size: 1.1rem;
+  font-weight: 300;
+  border: 0;
+  border-radius: 5px;
+  color: $grey-text;
+  background-color: $grey;
+  padding: 0.4rem 1rem 0.4rem 1rem;
+  cursor: pointer;
+}
+
+.main-event__registration__button {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 1rem;
 }
 
 // modal window DOWN
