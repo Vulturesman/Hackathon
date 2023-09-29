@@ -44,10 +44,31 @@
               <button data-close-button class="close-button">x</button>
             </div>
             <div class="window-main">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad velit
-              autem, praesentium quibusdam repellat assumenda at id tempora
-              accusamus magnam nam rem molestias corporis, illum explicabo alias
-              voluptate veniam doloremque!
+              <form
+              action="https://test-api.codingbootcamp.cz/api/bcc04bd8/events/EVENT_ID/registrations"
+              method="POST"
+              id="register-form"
+            >
+              <label for="firstName">First Name:</label><br />
+              <input type="text" id="firstName" name="firstName" value="" /><br />
+            
+              <label for="lastName">Last name:</label><br />
+              <input type="text" id="lname" name="lname" value="" /><br />
+            
+              <label for="email">Email</label><br />
+              <input type="text" id="email" name="email" value="" /><br />
+            
+              <label for="phoneNumber">Phone Number</label><br />
+              <input type="text" id="phoneNumber" name="phoneNumber" value="" />
+            
+              <p>I'm old enough to participate.</p>
+              <input type="radio" id="yes" name="age" value="yes" />
+              <label for="yes">Yes</label><br />
+              <input type="radio" id="no" name="age" value="no" />
+              <label for="no">No</label>
+              <br /><br />
+              <button class="registration-button-submit">Submit</button>
+            </form>
             </div>
           </div>
         </div>
